@@ -163,7 +163,7 @@ function generateDash(data,geom){
                 .size(650)
                 .columns([
                     function(d){
-                       return d['#org+name']; 
+                       return '<a href="'+d['#meta+url']+'" target="_blank">'+d['#org+name']+'</a>'; 
                     },
                     function(d){
                        return d['#org+type']; 
@@ -182,9 +182,6 @@ function generateDash(data,geom){
                     },
                     function(d){
                        return d['#service+language'];
-                    },
-                    function(d){
-                       return '<a href="'+d['#meta+url']+'" target="_blank">Link</a>'; 
                     }
                 ]);            
                                
